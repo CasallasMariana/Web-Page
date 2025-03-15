@@ -1,0 +1,329 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	background-color: rgb(74, 31, 116);
+	text-align: center;
+	
+}
+
+body {
+	background: #9eecf4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:"header header header"
+						"contenido contenido siderbar"
+						"Widget-1 Widget-2 siderbar "
+						"footer footer footer ";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .siderbar,
+.contenedor .footer  {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .header{
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor .contenido{
+	grid-area: contenido;
+}
+
+.contenedor .siderbar{
+	grid-column: 3/4;
+	background: #afadab;
+}
+
+#texto{
+text-align: left;
+}
+
+.contenedor .Widget-1,
+.contenedor .Widget-2 {
+	background: #143555;
+	color: #fff;
+	height: 400px;
+	text-align: left;
+	align-items: center;
+}
+
+.contenedor .Widget-1{
+	grid-area: Widget-1;
+}
+
+.contenedor .Widget-2{
+	grid-area: Widget-2;
+}
+
+.contenedor .footer{
+	background: #1220e3;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor{
+		grid-template-areas: "header header header"
+							"contenido contenido contenido"
+							"siderbar siderbar siderbar"
+							"Widget-1 Widget-1 Widget-2 "
+							"footer footer footer ";
+	}
+}
+
+.imagen {
+    /*width: 300px;
+    height: auto;*/
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+	/*position: relative;
+	top: 20px;*/
+	text-align: center;
+}
+
+.img{
+text-align: center;
+}
+
+.contenedor{
+background-color: white;
+}
+
+.list{
+	text-align: right;
+}
+
+.nav-item{
+	font-style: oblique;
+	text-align: right;
+	margin-top: 30px;
+	/*margin-bottom: 30px;*/
+	/*margin-right: 10px;*/
+	margin-left: 160px;
+}
+
+#titulo{
+	font-family: "Dangrek", serif;
+	background: linear-gradient(45deg, #ff0000, #1a53ff, #ea01ff, #fcfc00, purple);
+	background-clip: text;
+	color: transparent;
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient{
+	0%{
+		background-position: 0%;
+	}
+	50%{
+		background-position: 100%;
+	}
+	100%{
+		background-position: 0%;
+	}
+}
+
+.buttons{
+display: flex;
+flex-direction: column;
+}
+
+.btn{
+	text-decoration: none;
+	padding: 20px 50px;
+	font-size: 1.5rem;
+	position: relative;
+	margin: 32px;
+}
+
+.btn-1{
+	background: #ea01ff;
+	color: #9eecf4;
+	border-radius: 50px;
+	transition: transform 0.3s ease;
+}
+
+.btn-1::after, .btn-1::before{
+content: "";
+position: absolute;
+opacity: 0.3;
+background: azure;
+border-radius: inherit;
+width: 100%;
+height: 100%;
+left: 0;
+bottom: 0;
+z-index: auto;
+transition: transform 0.3s ease;
+}
+
+.btn-1:hover{
+	transform: translate(-12px, -12px);
+}
+
+.btn-1:hover::after{
+	transform: translate(6px, 6px);
+}
+
+.btn-1:hover::before{
+	transform: translate(12px, 12px);
+}
+
+#text{
+	color:white;
+}
+
+#inicio{
+	color: aliceblue;
+	background: #afadab;
+}
+
+#trabaja{
+	color: aliceblue;
+	background: #afadab;
+}
+
+#servicios{
+	color: aliceblue;
+	background: #afadab;
+}
+
+#company{
+	font-family: "Dangrek", serif;
+	background: linear-gradient(45deg, #dd9191, white, #ea01ff, #fcfc00, pink);
+	background-clip: text;
+	color: transparent;
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+
+}
+
+/*Prueba para el muné deplegable*/
+
+/* Contenedor del menú */
+.dropdown {
+    position: fixed;
+    display: inline-block;
+	background: black;
+	top: -220px;
+	left: 30px;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícono de los tres puntos */
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Estilo del menú desplegable */
+.list {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgb(57, 15, 97);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 200px;
+    z-index: 100;
+}
+
+/* Quitar estilos de lista y mejorar la apariencia */
+.list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	text-align: center;
+}
+
+.list ul li {
+    padding: 8px 12px;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+#menu-toggle:checked + .menu-icon + .list {
+    display: block;
+}
+
+/* Cerrar menú al hacer clic fuera */
+.dropdown:focus-within .list {
+    display: block;
+}
+
+/* Efecto hover */
+.list ul li:hover {
+    background-color: black;
+}
+
+#volver{
+	position: fixed;
+	background: black;
+	top: 225px;
+	right: 275;
+}
+
+.btn-2{
+	background: #9724a1;
+	color: #2f1bb3;
+	border-radius: 50px;
+	transition: transform 0.3s ease;
+}
+
+.btn-2::after, .btn-2::before{
+content: "";
+position: absolute;
+opacity: 0.3;
+background: rgb(18, 25, 25);
+border-radius: inherit;
+width: 100%;
+height: 100%;
+left: 0;
+bottom: 0;
+z-index: auto;
+transition: transform 0.3s ease;
+}
+
+.btn-2:hover{
+	transform: translate(-12px, -12px);
+}
+
+.btn-2:hover::after{
+	transform: translate(6px, 6px);
+}
+
+.btn-2:hover::before{
+	transform: translate(12px, 12px);
+}
+
+

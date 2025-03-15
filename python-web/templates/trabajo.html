@@ -1,0 +1,89 @@
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<div class="contenedor">
+    <header class="header">
+       <h1 id="company"><strong>WEB DESIGN COMPANY</strong></h1>
+       <div class="img">
+       <img src="../static/css/fotoweb.jpg" alt="imagen empresa" class="imagen">
+   </div>
+   <div class="dropdown">
+    <input type="checkbox" id="menu-toggle"> <!-- Checkbox oculto -->
+    <label for="menu-toggle" class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+      </svg>
+    </label>
+  
+    <div class="list">
+      <ul>
+        <li><a id="inicio" href="http://localhost:5000"><strong>Inicio</strong></a></li>
+        <li><a id="trabaja" href="http://localhost:5000/trabajo"><strong>Trabaja con nosotros</strong></a></li>
+        <li><a id="servicios" href="http://localhost:5000/servicios"><strong>Nuestros servicios</strong></a></li>
+      </ul>
+    </div>
+  </div>
+       <div class="titulo">
+        <h1 id="titulo">Trabaja con nosostros.</h1>
+      </div>
+      <form>
+  <legend><h3>Formulario de registro.</h3></legend>     
+<div class="nombre"><label> Nombre:</label></div>
+<input type="text"><br>
+<br>
+
+<div class="apellido"><label> Apellido:</label></div>
+<input type="text"><br>
+<br>
+
+<div class="sexo"><label> Sexo:</label></div>
+
+
+<div class="hombre"><label> Hombre</label></div>
+<input type="radio">
+
+<div class="mujer"><label> Mujer</label></div>
+<input type="radio"><br>
+<br>
+
+<div class="Correo"><label> Correo:</label></div>
+<input type="email"><br>
+<br>
+
+<label> Población:</label>
+<select name="Poblacion"
+id="idpoblacion" >
+<option value="0">Blanca</option> 
+<option value="0">Negra</option>
+<option value="0">Kiubi</option>
+</select><br>
+<br>
+
+<label> Descripcion:</label> <textarea name="text"
+cols="100" rows="10"> 
+</textarea><br>
+<br>  
+
+<input type="checkbox"
+name="hobbie"
+readonly="readonly"><label>Deseo recibir información sobre novedades y ofertas.</label><br>
+<br> 
+<input type="checkbox"
+name="hobbie"
+readonly="readonly"><label>Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos.</label><br>
+<br>
+</form>
+<!-------------------------------------->
+<!--<div class="contenedor-button">-->
+  <div class="buttons">
+  <a href="http://localhost:5000/plantilla" class="btn btn-1"><strong id="text">Enviar</strong></a>
+  </div>
+</div>
+</header>
+
+
+
+</div>
+</body>
+</html>
